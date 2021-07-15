@@ -20,6 +20,10 @@ const data: Array<DataItem> = [
     name: 'Chewing Gum Card',
     screenID: ScreenID.CHEWING_GUM_CARD,
   },
+  {
+    name: 'Wave Screen',
+    screenID: ScreenID.WAVE_SCREEN,
+  },
 ];
 
 export default function Home({ navigation }: AppProps) {

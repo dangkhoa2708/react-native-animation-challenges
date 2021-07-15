@@ -5,6 +5,7 @@ import ScreenID from './ScreenID';
 import TinderScreen from '../components/tinderCard/App';
 import ChewingGumScreen from '../components/chewingGumCard/Main';
 import Home from '../Home';
+import WaterScreen from '../components/animateWave/WaveScreen';
 
 const Stack = createStackNavigator();
 
@@ -18,6 +19,7 @@ function NavigationMain() {
           name={ScreenID.CHEWING_GUM_CARD}
           component={ChewingGumScreen}
         />
+        <Stack.Screen name={ScreenID.WAVE_SCREEN} component={WaterScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
