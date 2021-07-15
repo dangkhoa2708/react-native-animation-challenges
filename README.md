@@ -5,6 +5,7 @@ I do animation challenges, it's more like testing implementation ideas, so the c
 <div>
   <img src="https://github.com/dangkhoa2708/react-native-animation-challenges/blob/main/assets/gifs/chewing_gum.gif" width="160" height="240" />
 <img src="https://github.com/dangkhoa2708/react-native-animation-challenges/blob/main/assets/gifs/tinder_card.gif" width="160" height="240" />
+<img src="https://github.com/dangkhoa2708/react-native-animation-challenges/blob/main/assets/gifs/wave.gif" width="160" height="240" />
 
   </div>
 
