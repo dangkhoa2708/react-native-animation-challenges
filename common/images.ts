@@ -6,4 +6,5 @@ export default {
   iconThunder: require('../assets/ic_thunder.png'),
   iconVolume: require('../assets/ic_volume.png'),
   iconArrowDown: require('../assets/ic_arrow_down.png'),
+  imgDuolingo: require('../assets/img_duolingo.png'),
 };

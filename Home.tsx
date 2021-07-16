@@ -24,6 +24,10 @@ const data: Array<DataItem> = [
     name: 'Wave Screen',
     screenID: ScreenID.WAVE_SCREEN,
   },
+  {
+    name: 'Duolingo',
+    screenID: ScreenID.DUOLINGO,
+  },
 ];
 
 export default function Home({ navigation }: AppProps) {
