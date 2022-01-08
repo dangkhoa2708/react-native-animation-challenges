@@ -8,6 +8,7 @@ I mainly implement and test on IOS. so npm install & pod install will get it run
 <img src="https://github.com/dangkhoa2708/react-native-animation-challenges/blob/main/assets/gifs/tinder_card.gif" width="160" height="240" />
 <img src="https://github.com/dangkhoa2708/react-native-animation-challenges/blob/main/assets/gifs/wave.gif" width="160" height="240" />
 <img src="https://github.com/dangkhoa2708/react-native-animation-challenges/blob/main/assets/gifs/duoGif.gif" width="160" height="240" />
+<img src="https://github.com/dangkhoa2708/react-native-animation-challenges/blob/main/assets/gifs/dishes.gif" width="160" height="240" />
 
 
   </div>
