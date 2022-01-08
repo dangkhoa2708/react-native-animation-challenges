@@ -14,6 +14,7 @@
 		48B8CA085B89529F3CAC8295 /* libPods-animateLearn-animateLearnTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1598F5C697C6955F26445CF9 /* libPods-animateLearn-animateLearnTests.a */; };
 		6D9722F3765E05CEACCEC4E1 /* libPods-animateLearn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C912F4544381E4427588A0B0 /* libPods-animateLearn.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		9A297F6F2789532900917F4D /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A297F6E2789532900917F4D /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		41062F8DCE68A999B10FB672 /* Pods-animateLearn-animateLearnTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-animateLearn-animateLearnTests.debug.xcconfig"; path = "Target Support Files/Pods-animateLearn-animateLearnTests/Pods-animateLearn-animateLearnTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5BFA0B503E4C7159CB79A3EF /* Pods-animateLearn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-animateLearn.release.xcconfig"; path = "Target Support Files/Pods-animateLearn/Pods-animateLearn.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = animateLearn/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9A297F6D2789532900917F4D /* animateLearn-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "animateLearn-Bridging-Header.h"; sourceTree = "<group>"; };
+		9A297F6E2789532900917F4D /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		C912F4544381E4427588A0B0 /* libPods-animateLearn.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-animateLearn.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E24BB1CD6EE0380845DC63A3 /* Pods-animateLearn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-animateLearn.debug.xcconfig"; path = "Target Support Files/Pods-animateLearn/Pods-animateLearn.debug.xcconfig"; sourceTree = "<group>"; };
 		E342F63A95B2AB0EB5D643B8 /* Pods-animateLearn-animateLearnTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-animateLearn-animateLearnTests.release.xcconfig"; path = "Target Support Files/Pods-animateLearn-animateLearnTests/Pods-animateLearn-animateLearnTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -114,7 +117,6 @@
 				41062F8DCE68A999B10FB672 /* Pods-animateLearn-animateLearnTests.debug.xcconfig */,
 				E342F63A95B2AB0EB5D643B8 /* Pods-animateLearn-animateLearnTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -128,12 +130,14 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				9A297F6E2789532900917F4D /* File.swift */,
 				13B07FAE1A68108700A75B9A /* animateLearn */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* animateLearnTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				567ECFBA644BC9497CB20CE7 /* Pods */,
+				9A297F6D2789532900917F4D /* animateLearn-Bridging-Header.h */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -208,7 +212,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1320;
 					};
 				};
 			};
@@ -412,6 +416,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				9A297F6F2789532900917F4D /* File.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,6 +436,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 41062F8DCE68A999B10FB672 /* Pods-animateLearn-animateLearnTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -458,6 +464,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E342F63A95B2AB0EB5D643B8 /* Pods-animateLearn-animateLearnTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = animateLearnTests/Info.plist;
@@ -498,6 +505,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = animateLearn;
+				SWIFT_OBJC_BRIDGING_HEADER = "animateLearn-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -523,6 +531,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = animateLearn;
+				SWIFT_OBJC_BRIDGING_HEADER = "animateLearn-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
