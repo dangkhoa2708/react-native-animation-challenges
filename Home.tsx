@@ -28,6 +28,10 @@ const data: Array<DataItem> = [
     name: 'Duolingo',
     screenID: ScreenID.DUOLINGO,
   },
+  {
+    name: 'Scroll Dishes',
+    screenID: ScreenID.SCROLL_DISHES,
+  },
 ];
 
 export default function Home({ navigation }: AppProps) {

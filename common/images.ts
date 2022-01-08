@@ -7,4 +7,12 @@ export default {
   iconVolume: require('../assets/ic_volume.png'),
   iconArrowDown: require('../assets/ic_arrow_down.png'),
   imgDuolingo: require('../assets/img_duolingo.png'),
+  iconFire: require('../assets/fire.png'),
+  iconCompass: require('../assets/compass.png'),
+  iconFlash: require('../assets/flash.png'),
+  iconRibbon: require('../assets/ribbon.png'),
+  iconWater: require('../assets/water.png'),
+  imgPizza: require('../assets/pizza.png'),
+  imgBeef: require('../assets/beef.png'),
+  imgSpaghetti: require('../assets/spaghetti.png'),
 };

@@ -7,6 +7,7 @@ import ChewingGumScreen from '../components/chewingGumCard/Main';
 import Home from '../Home';
 import WaterScreen from '../components/animateWave/WaveScreen';
 import Duolingo from '../components/duolingo';
+import ScrollDishes from '../components/ScrollDishes';
 
 const Stack = createStackNavigator();
 
@@ -22,6 +23,13 @@ function NavigationMain() {
         />
         <Stack.Screen name={ScreenID.WAVE_SCREEN} component={WaterScreen} />
         <Stack.Screen name={ScreenID.DUOLINGO} component={Duolingo} />
+        <Stack.Screen
+          options={{
+            headerShown: false,
+          }}
+          name={ScreenID.SCROLL_DISHES}
+          component={ScrollDishes}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

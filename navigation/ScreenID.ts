@@ -4,4 +4,5 @@ export default {
   CHEWING_GUM_CARD: 'chewing_gum_card',
   WAVE_SCREEN: 'wave_screen',
   DUOLINGO: 'duolingo',
+  SCROLL_DISHES: 'scroll_dishes',
 };
