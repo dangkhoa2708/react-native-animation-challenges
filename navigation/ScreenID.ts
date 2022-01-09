@@ -5,4 +5,5 @@ export default {
   WAVE_SCREEN: 'wave_screen',
   DUOLINGO: 'duolingo',
   SCROLL_DISHES: 'scroll_dishes',
+  ANIMATE_SPLASH: 'animate_splash',
 };

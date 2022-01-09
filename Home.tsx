@@ -32,6 +32,10 @@ const data: Array<DataItem> = [
     name: 'Scroll Dishes',
     screenID: ScreenID.SCROLL_DISHES,
   },
+  {
+    name: 'Animate Splash',
+    screenID: ScreenID.ANIMATE_SPLASH,
+  },
 ];
 
 export default function Home({ navigation }: AppProps) {

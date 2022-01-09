@@ -8,6 +8,7 @@ import Home from '../Home';
 import WaterScreen from '../components/animateWave/WaveScreen';
 import Duolingo from '../components/duolingo';
 import ScrollDishes from '../components/ScrollDishes';
+import AnimateSplash from '../components/AnimateSplash';
 
 const Stack = createStackNavigator();
 
@@ -29,6 +30,13 @@ function NavigationMain() {
           }}
           name={ScreenID.SCROLL_DISHES}
           component={ScrollDishes}
+        />
+        <Stack.Screen
+          options={{
+            headerShown: false,
+          }}
+          name={ScreenID.ANIMATE_SPLASH}
+          component={AnimateSplash}
         />
       </Stack.Navigator>
     </NavigationContainer>

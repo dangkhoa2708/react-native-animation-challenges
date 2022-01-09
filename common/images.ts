@@ -15,4 +15,7 @@ export default {
   imgPizza: require('../assets/pizza.png'),
   imgBeef: require('../assets/beef.png'),
   imgSpaghetti: require('../assets/spaghetti.png'),
+  imgFirst: require('../assets/first.png'),
+  imgSecond: require('../assets/second.png'),
+  imgThird: require('../assets/third.png'),
 };
