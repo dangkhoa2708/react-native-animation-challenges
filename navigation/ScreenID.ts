@@ -6,4 +6,5 @@ export default {
   DUOLINGO: 'duolingo',
   SCROLL_DISHES: 'scroll_dishes',
   ANIMATE_SPLASH: 'animate_splash',
+  PARALLAX_SWIPE: 'parallax_swipe',
 };

@@ -36,6 +36,10 @@ const data: Array<DataItem> = [
     name: 'Animate Splash',
     screenID: ScreenID.ANIMATE_SPLASH,
   },
+  {
+    name: 'Parallax Swipe',
+    screenID: ScreenID.PARALLAX_SWIPE,
+  },
 ];
 
 export default function Home({ navigation }: AppProps) {

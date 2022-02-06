@@ -9,6 +9,7 @@ import WaterScreen from '../components/animateWave/WaveScreen';
 import Duolingo from '../components/duolingo';
 import ScrollDishes from '../components/ScrollDishes';
 import AnimateSplash from '../components/AnimateSplash';
+import ParallaxSwipe from '../components/ParallaxSwipe';
 
 const Stack = createStackNavigator();
 
@@ -37,6 +38,13 @@ function NavigationMain() {
           }}
           name={ScreenID.ANIMATE_SPLASH}
           component={AnimateSplash}
+        />
+        <Stack.Screen
+          options={{
+            headerShown: false,
+          }}
+          name={ScreenID.PARALLAX_SWIPE}
+          component={ParallaxSwipe}
         />
       </Stack.Navigator>
     </NavigationContainer>

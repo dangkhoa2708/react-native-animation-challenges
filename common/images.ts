@@ -18,4 +18,8 @@ export default {
   imgFirst: require('../assets/first.png'),
   imgSecond: require('../assets/second.png'),
   imgThird: require('../assets/third.png'),
+  imgRedShoe: require('../assets/red_shoe.png'),
+  imgYellowShoe: require('../assets/yellow_shoe.png'),
+  imgBlueShoe: require('../assets/blue_shoe.png'),
+  imgGreenShoe: require('../assets/green_shoe.png'),
 };
