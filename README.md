@@ -3,7 +3,7 @@ I do animation & UI challenges, it's more like testing implementation ideas, so 
 
 <!-- ![alt-text](https://github.com/dangkhoa2708/react-native-animation-challenges/blob/main/assets/gifs/chewing_gum.gif) -->
 <div>
-  <img src="https://github.com/dangkhoa2708/react-native-animation-challenges/blob/main/assets/gifs/emotions_feedback.gif" width="120" height="240" />
+  <img src="https://github.com/dangkhoa2708/react-native-animation-challenges/blob/main/assets/gifs/emotions_feedback.gif" width="140" height="240" />
 <img src="https://github.com/dangkhoa2708/react-native-animation-challenges/blob/main/assets/gifs/parallax_swiper.gif" width="120" height="240" />
 <img src="https://github.com/dangkhoa2708/react-native-animation-challenges/blob/main/assets/gifs/animate_splash.gif" width="120" height="240" />
 <img src="https://github.com/dangkhoa2708/react-native-animation-challenges/blob/main/assets/gifs/tinder_card.gif" width="160" height="240" />
