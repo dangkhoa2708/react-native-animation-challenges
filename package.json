@@ -14,14 +14,16 @@
     "@react-native-community/masked-view": "^0.1.11",
     "@react-navigation/native": "^5.9.4",
     "@react-navigation/stack": "^5.14.5",
+    "@shopify/react-native-skia": "https://github.com/Shopify/react-native-skia/releases/download/v0.1.103-alpha/shopify-react-native-skia-0.1.103.tgz",
     "react": "17.0.1",
     "react-native": "0.64.2",
     "react-native-gesture-handler": "^2.1.0",
     "react-native-linear-gradient": "^2.5.6",
     "react-native-reanimated": "^2.3.1",
-    "react-native-redash": "^16.1.1",
+    "react-native-redash": "^16.2.3",
     "react-native-safe-area-context": "^3.2.0",
-    "react-native-screens": "^3.4.0"
+    "react-native-screens": "^3.4.0",
+    "react-native-svg": "^12.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",

@@ -10,6 +10,7 @@ import Duolingo from '../components/duolingo';
 import ScrollDishes from '../components/ScrollDishes';
 import AnimateSplash from '../components/AnimateSplash';
 import ParallaxSwipe from '../components/ParallaxSwipe';
+import FeedbackFaces from '../components/FeedbackFaces';
 
 const Stack = createStackNavigator();
 
@@ -45,6 +46,13 @@ function NavigationMain() {
           }}
           name={ScreenID.PARALLAX_SWIPE}
           component={ParallaxSwipe}
+        />
+        <Stack.Screen
+          options={{
+            headerShown: false,
+          }}
+          name={ScreenID.FEEDBACK_FACES}
+          component={FeedbackFaces}
         />
       </Stack.Navigator>
     </NavigationContainer>

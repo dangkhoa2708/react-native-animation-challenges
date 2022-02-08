@@ -7,4 +7,5 @@ export default {
   SCROLL_DISHES: 'scroll_dishes',
   ANIMATE_SPLASH: 'animate_splash',
   PARALLAX_SWIPE: 'parallax_swipe',
+  FEEDBACK_FACES: 'FEEDBACK_FACES',
 };

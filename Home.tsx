@@ -40,6 +40,10 @@ const data: Array<DataItem> = [
     name: 'Parallax Swipe',
     screenID: ScreenID.PARALLAX_SWIPE,
   },
+  {
+    name: 'Feedback Faces',
+    screenID: ScreenID.FEEDBACK_FACES,
+  },
 ];
 
 export default function Home({ navigation }: AppProps) {
