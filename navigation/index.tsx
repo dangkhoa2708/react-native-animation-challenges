@@ -11,6 +11,7 @@ import ScrollDishes from '../components/ScrollDishes';
 import AnimateSplash from '../components/AnimateSplash';
 import ParallaxSwipe from '../components/ParallaxSwipe';
 import FeedbackFaces from '../components/FeedbackFaces';
+import PizzaChallenge from '../components/PizzaChallange';
 
 const Stack = createStackNavigator();
 
@@ -53,6 +54,13 @@ function NavigationMain() {
           }}
           name={ScreenID.FEEDBACK_FACES}
           component={FeedbackFaces}
+        />
+        <Stack.Screen
+          options={{
+            headerShown: false,
+          }}
+          name={ScreenID.PIZZA_CHALLENGE}
+          component={PizzaChallenge}
         />
       </Stack.Navigator>
     </NavigationContainer>

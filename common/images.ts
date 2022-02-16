@@ -22,4 +22,5 @@ export default {
   imgYellowShoe: require('../assets/yellow_shoe.png'),
   imgBlueShoe: require('../assets/blue_shoe.png'),
   imgGreenShoe: require('../assets/green_shoe.png'),
+  imgShoppingCart: require('../assets/shopping_cart.png'),
 };

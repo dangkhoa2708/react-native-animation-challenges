@@ -8,4 +8,5 @@ export default {
   ANIMATE_SPLASH: 'animate_splash',
   PARALLAX_SWIPE: 'parallax_swipe',
   FEEDBACK_FACES: 'FEEDBACK_FACES',
+  PIZZA_CHALLENGE: 'PIZZA_CHALLENGE',
 };

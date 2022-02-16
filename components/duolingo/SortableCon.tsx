@@ -92,7 +92,6 @@ export default function SortableCon({
     { offsetX: number; offsetY: number; isSorted: boolean }
   >({
     onStart: (_, ctx) => {
-      console.log('isSorted', isSorted);
       if (isSorted.value) {
         translateX.value = offsetItem.x.value;
         translateY.value = offsetItem.y.value;

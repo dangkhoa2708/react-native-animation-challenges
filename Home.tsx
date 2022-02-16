@@ -44,6 +44,10 @@ const data: Array<DataItem> = [
     name: 'Feedback Faces',
     screenID: ScreenID.FEEDBACK_FACES,
   },
+  {
+    name: 'Pizza Challenge',
+    screenID: ScreenID.PIZZA_CHALLENGE,
+  },
 ];
 
 export default function Home({ navigation }: AppProps) {

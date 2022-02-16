@@ -232,7 +232,6 @@ const App = () => {
           if (absX < 2 && event.translationY < -5) {
             runOnJS(setCode)('superLike');
           }
-          console.log('event.translationX ', event.translationX);
           if (absX > 2) {
             if (rotate.value < 0) {
               runOnJS(updateText)('LIKE');

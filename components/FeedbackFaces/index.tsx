@@ -21,7 +21,6 @@ export default function FeedbackFaces() {
   const slideValue = useSharedValue(0);
 
   const text = useSharedValue('Hideous');
-  console.log('sliderWidth', sliderWidth);
 
   useAnimatedReaction(
     () => {
