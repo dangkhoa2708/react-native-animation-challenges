@@ -15,6 +15,8 @@
     "@react-navigation/native": "^5.9.4",
     "@react-navigation/stack": "^5.14.5",
     "@shopify/react-native-skia": "https://github.com/Shopify/react-native-skia/releases/download/v0.1.103-alpha/shopify-react-native-skia-0.1.103.tgz",
+    "expo": ">=44.0.0-0 <45.0.0",
+    "expo-blur": "~11.0.0",
     "react": "17.0.1",
     "react-native": "0.64.2",
     "react-native-gesture-handler": "^2.1.0",

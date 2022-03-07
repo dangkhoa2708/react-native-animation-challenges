@@ -20,8 +20,6 @@ import Animated, {
 import IngredientList from './IngredientList';
 import Box from './Box';
 
-const { width } = Dimensions.get('screen');
-
 export type IngredientIndexState = {
   [EnumType.BROCCOLI]: 0;
   [EnumType.MUSHROOM]: 0;

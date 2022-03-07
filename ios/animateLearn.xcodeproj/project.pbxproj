@@ -12,9 +12,11 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		48B8CA085B89529F3CAC8295 /* libPods-animateLearn-animateLearnTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1598F5C697C6955F26445CF9 /* libPods-animateLearn-animateLearnTests.a */; };
+		51CE7B78217A118076E69F68 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829E924E066B3763B3E14169 /* ExpoModulesProvider.swift */; };
 		6D9722F3765E05CEACCEC4E1 /* libPods-animateLearn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C912F4544381E4427588A0B0 /* libPods-animateLearn.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		9A297F6F2789532900917F4D /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A297F6E2789532900917F4D /* File.swift */; };
+		BB6A00ACF5723CB29285D2E0 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3CAB3047614C09423DB9F9 /* ExpoModulesProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +43,8 @@
 		41062F8DCE68A999B10FB672 /* Pods-animateLearn-animateLearnTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-animateLearn-animateLearnTests.debug.xcconfig"; path = "Target Support Files/Pods-animateLearn-animateLearnTests/Pods-animateLearn-animateLearnTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5BFA0B503E4C7159CB79A3EF /* Pods-animateLearn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-animateLearn.release.xcconfig"; path = "Target Support Files/Pods-animateLearn/Pods-animateLearn.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = animateLearn/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		829E924E066B3763B3E14169 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-animateLearn-animateLearnTests/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
+		8F3CAB3047614C09423DB9F9 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-animateLearn/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 		9A297F6D2789532900917F4D /* animateLearn-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "animateLearn-Bridging-Header.h"; sourceTree = "<group>"; };
 		9A297F6E2789532900917F4D /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		C912F4544381E4427588A0B0 /* libPods-animateLearn.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-animateLearn.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +90,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		0A92333AC993C7E3E7D06AFD /* animateLearn */ = {
+			isa = PBXGroup;
+			children = (
+				8F3CAB3047614C09423DB9F9 /* ExpoModulesProvider.swift */,
+			);
+			name = animateLearn;
+			sourceTree = "<group>";
+		};
 		13B07FAE1A68108700A75B9A /* animateLearn */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +109,14 @@
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
 			name = animateLearn;
+			sourceTree = "<group>";
+		};
+		157887F0563F00BF0544D0C7 /* animateLearnTests */ = {
+			isa = PBXGroup;
+			children = (
+				829E924E066B3763B3E14169 /* ExpoModulesProvider.swift */,
+			);
+			name = animateLearnTests;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -138,6 +158,7 @@
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				567ECFBA644BC9497CB20CE7 /* Pods */,
 				9A297F6D2789532900917F4D /* animateLearn-Bridging-Header.h */,
+				D5B5B5A9F8266D4497299F5B /* ExpoModulesProviders */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -151,6 +172,15 @@
 				00E356EE1AD99517003FC87E /* animateLearnTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		D5B5B5A9F8266D4497299F5B /* ExpoModulesProviders */ = {
+			isa = PBXGroup;
+			children = (
+				0A92333AC993C7E3E7D06AFD /* animateLearn */,
+				157887F0563F00BF0544D0C7 /* animateLearnTests */,
+			);
+			name = ExpoModulesProviders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -408,6 +438,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00E356F31AD99517003FC87E /* animateLearnTests.m in Sources */,
+				51CE7B78217A118076E69F68 /* ExpoModulesProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +449,7 @@
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				9A297F6F2789532900917F4D /* File.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				BB6A00ACF5723CB29285D2E0 /* ExpoModulesProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,7 +475,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = animateLearnTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -456,6 +488,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/animateLearn.app/animateLearn";
 			};
 			name = Debug;
@@ -468,7 +501,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = animateLearnTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -481,6 +514,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/animateLearn.app/animateLearn";
 			};
 			name = Release;
@@ -586,7 +620,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
@@ -644,7 +678,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",

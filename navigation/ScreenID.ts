@@ -9,4 +9,5 @@ export default {
   PARALLAX_SWIPE: 'parallax_swipe',
   FEEDBACK_FACES: 'FEEDBACK_FACES',
   PIZZA_CHALLENGE: 'PIZZA_CHALLENGE',
+  HOLD_MENU: 'HOLD_MENU',
 };

@@ -48,6 +48,10 @@ const data: Array<DataItem> = [
     name: 'Pizza Challenge',
     screenID: ScreenID.PIZZA_CHALLENGE,
   },
+  {
+    name: 'Hold Menu',
+    screenID: ScreenID.HOLD_MENU,
+  },
 ];
 
 export default function Home({ navigation }: AppProps) {

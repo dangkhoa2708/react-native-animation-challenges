@@ -12,6 +12,7 @@ import AnimateSplash from '../components/AnimateSplash';
 import ParallaxSwipe from '../components/ParallaxSwipe';
 import FeedbackFaces from '../components/FeedbackFaces';
 import PizzaChallenge from '../components/PizzaChallange';
+import HoldMenuScreen from '../components/HoldMenu';
 
 const Stack = createStackNavigator();
 
@@ -61,6 +62,13 @@ function NavigationMain() {
           }}
           name={ScreenID.PIZZA_CHALLENGE}
           component={PizzaChallenge}
+        />
+        <Stack.Screen
+          options={{
+            headerShown: false,
+          }}
+          name={ScreenID.HOLD_MENU}
+          component={HoldMenuScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>
