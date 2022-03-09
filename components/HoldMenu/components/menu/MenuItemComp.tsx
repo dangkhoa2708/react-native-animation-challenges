@@ -1,17 +1,11 @@
 import React from 'react';
 import {
-  Image,
   StyleProp,
   StyleSheet,
-  Text,
   TouchableOpacity,
-  View,
   ViewStyle,
 } from 'react-native';
-import Animated, {
-  useAnimatedStyle,
-  useDerivedValue,
-} from 'react-native-reanimated';
+import Animated from 'react-native-reanimated';
 import Helper from '../../../../Helper';
 import constants, { lightColor } from '../../constants';
 import { MenuItem } from './types';

@@ -106,7 +106,6 @@ export default function Menu() {
     const translateX = -Math.abs(menuProps.value.anchorWidth - MENU_WIDTH) - 10;
     if (menuEndX > windowWidth) {
       return {
-        // left: -Math.abs(menuProps.value.anchorWidth - MENU_WIDTH),
         transform: [{ scale }, { translateX }],
       };
     }
