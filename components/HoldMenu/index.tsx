@@ -43,41 +43,105 @@ const fakeItems2: Array<MenuItem> = [
 
 export default function HoldMenuScreen() {
   return (
-    <HoldMenuProvider>
-      <View style={{ paddingTop: 100, flex: 1, alignItems: 'baseline' }}>
-        <HoldItem
-          style={{
-            marginLeft: 200,
-          }}
-          menuItems={fakeItems}>
+    <View style={{ flex: 1 }}>
+      <HoldMenuProvider>
+        <View style={{ paddingTop: 100, flex: 1, alignItems: 'baseline' }}>
+          <HoldItem
+            style={{
+              marginLeft: 20,
+              marginTop: 50,
+            }}
+            menuItems={fakeItems}>
+            <View
+              style={{
+                padding: 10,
+                backgroundColor: 'yellow',
+                borderRadius: 20,
+                maxWidth: 250,
+              }}>
+              <Text>Heloodsadskjdhajshdkjashdkajsdhkjaasdasdsdsdhjkasdh</Text>
+            </View>
+          </HoldItem>
+          <HoldItem
+            style={{
+              marginLeft: 100,
+              marginTop: 50,
+              // maxWidth: 250,
+            }}
+            menuItems={fakeItems}>
+            <View
+              style={{
+                backgroundColor: 'blue',
+                borderRadius: 20,
+
+                padding: 10,
+              }}>
+              <Text style={{ color: 'white' }}>
+                Heasdasdsdsaasdasddadasdasasdasdasdasdasdsadasddasdasdasdasdsdasdassdas
+              </Text>
+            </View>
+          </HoldItem>
+          <HoldItem
+            style={{
+              marginLeft: 20,
+              marginTop: 50,
+              // maxWidth: 250,
+            }}
+            menuItems={fakeItems}>
+            <View
+              style={{
+                backgroundColor: 'red',
+                borderRadius: 20,
+
+                padding: 10,
+              }}>
+              <Text style={{ color: 'white' }}>Heasdas</Text>
+            </View>
+          </HoldItem>
+          <HoldItem
+            style={{
+              marginLeft: 300,
+              marginTop: 50,
+              // maxWidth: 250,
+            }}
+            menuItems={fakeItems}>
+            <View
+              style={{
+                backgroundColor: 'green',
+                borderRadius: 20,
+
+                padding: 10,
+              }}>
+              <Text style={{ color: 'white' }}>Heasdas</Text>
+            </View>
+          </HoldItem>
+          <HoldItem
+            style={{ marginTop: 270, marginLeft: 20 }}
+            menuItems={fakeItems2}>
+            <View
+              style={{
+                padding: 10,
+                backgroundColor: 'grey',
+                maxWidth: 150,
+                borderRadius: 20,
+              }}>
+              <Text>
+                Heloodsadskjdhajshdkasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasd
+              </Text>
+            </View>
+          </HoldItem>
+
           <View
             style={{
+              marginTop: 50,
+
               width: 100,
               height: 100,
               backgroundColor: 'red',
             }}
           />
-        </HoldItem>
-        <HoldItem style={{ marginTop: 500 }} menuItems={fakeItems}>
-          <View
-            style={{
-              width: 100,
-              height: 100,
-              backgroundColor: 'red',
-            }}
-          />
-        </HoldItem>
-
-        <View
-          style={{
-            marginTop: 50,
-
-            width: 100,
-            height: 100,
-            backgroundColor: 'red',
-          }}
-        />
-      </View>
-    </HoldMenuProvider>
+        </View>
+      </HoldMenuProvider>
+    </View>
   );
 }

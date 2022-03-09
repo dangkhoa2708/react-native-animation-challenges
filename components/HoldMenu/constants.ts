@@ -11,11 +11,13 @@ const isIphoneX =
   (screenHeight >= 812 || width >= 812);
 
 const HOLD_ITEM_TRANSFORM_DURATION = 250;
-const HOLD_ITEM_SCALE_DOWN_VALUE = 0.95;
+const HOLD_ITEM_SCALE_DOWN_VALUE = 0.9;
+const HOLD_ITEM_SCALE_UP_VALUE = 1;
+
 const HOLD_ITEM_SCALE_NORMAL = 1;
 const MENU_WIDTH = width * 0.5;
 const MENU_ITEM_HEIGHT = Helper.normalize(40);
-const INSET_GAP = Helper.normalize(20);
+const INSET_GAP = Helper.normalize(60);
 const EXTRA_BOTTOM = isIphoneX ? 34 : 0;
 
 const NAV_BAR_HEIGHT =
@@ -30,6 +32,19 @@ export const lightColor = {
     separator: '#bfbfbf',
   },
 };
+
+export const shadow = (opacity = 1, elevation = 4) =>
+  Platform.select({
+    ios: {
+      shadowColor: '#000000',
+      shadowOpacity: opacity,
+      shadowOffset: { width: 0, height: 10 },
+      shadowRadius: 30,
+    },
+    android: {
+      elevation,
+    },
+  });
 
 const darkColor = {
   menuItem: {
@@ -48,4 +63,5 @@ export default {
   INSET_GAP,
   NAV_BAR_HEIGHT,
   EXTRA_BOTTOM,
+  HOLD_ITEM_SCALE_UP_VALUE,
 };

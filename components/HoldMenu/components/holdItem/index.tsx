@@ -1,21 +1,13 @@
-import React, {
-  ReactElement,
-  ReactNode,
-  useContext,
-  useEffect,
-  useMemo,
-} from 'react';
+import React, { ReactElement, useMemo, useRef } from 'react';
 import { StyleProp, View, ViewStyle } from 'react-native';
 import {
   LongPressGestureHandler,
   LongPressGestureHandlerGestureEvent,
 } from 'react-native-gesture-handler';
 import Animated, {
-  measure,
   runOnJS,
   useAnimatedGestureHandler,
   useAnimatedReaction,
-  useAnimatedRef,
   useAnimatedStyle,
   useSharedValue,
   withTiming,
@@ -37,20 +29,25 @@ export default function HoldItem({
 }: HoldItemProps) {
   const { menuProps, isMenuOpened, setMenuItems } = useInternal();
   const { updateNode } = usePortal();
-  const containerRef = useAnimatedRef<Animated.View>();
   const animateScale = useSharedValue(1);
   const isActived = useSharedValue(false);
+  const viewRef = useRef<View>(null);
 
   useAnimatedReaction(
     () => {
       return isMenuOpened.value;
     },
     result => {
-      if (result == 0 && isActived.value) {
+      if (result < 1 && isActived.value) {
         isActived.value = false;
       }
     },
   );
+
+  const setUpUI = () => {
+    updateNode(children);
+    setMenuItems(menuItems);
+  };
 
   const animatedStyle = useAnimatedStyle(() => {
     const opacity = isActived.value ? 0 : 1;
@@ -70,17 +67,32 @@ export default function HoldItem({
     HOLD_ITEM_SCALE_NORMAL,
   } = constants;
 
-  const setUpUI = () => {
-    updateNode(children);
-    setMenuItems(menuItems);
+  const onCompleteHold = () => {
+    isActived.value = true;
+
+    isMenuOpened.value = withTiming(
+      1,
+      {
+        duration: HOLD_ITEM_TRANSFORM_DURATION,
+      },
+      () => {
+        animateScale.value = HOLD_ITEM_SCALE_NORMAL;
+      },
+    );
   };
 
-  const onCompleteHold = () => {
-    setTimeout(() => {
-      animateScale.value = HOLD_ITEM_SCALE_NORMAL;
-      isMenuOpened.value = 1;
-      isActived.value = true;
-    }, HOLD_ITEM_TRANSFORM_DURATION);
+  const calculateMenuProps = () => {
+    setUpUI();
+
+    viewRef.current &&
+      viewRef.current.measureInWindow((x, y, width, height) => {
+        menuProps.value = {
+          anchorHeight: height,
+          anchorWidth: width,
+          anchorX: x,
+          anchorY: y,
+        };
+      });
   };
 
   const scaleHold = () => {
@@ -98,22 +110,11 @@ export default function HoldItem({
 
   const onGestureEvent =
     useAnimatedGestureHandler<LongPressGestureHandlerGestureEvent>({
-      onStart: event => {
-        runOnJS(setUpUI)();
-        const measured = measure(containerRef);
-
-        menuProps.value = {
-          anchorHeight: measured.height,
-          anchorWidth: measured.width,
-          anchorX: measured.x,
-          anchorY: measured.y,
-        };
+      onStart: () => {
+        runOnJS(calculateMenuProps)();
       },
-      onActive: event => {
+      onActive: () => {
         scaleHold();
-      },
-      onEnd: () => {
-        // scaleEnd();
       },
     });
 
@@ -122,8 +123,8 @@ export default function HoldItem({
       <LongPressGestureHandler
         minDurationMs={HOLD_ITEM_TRANSFORM_DURATION}
         onGestureEvent={onGestureEvent}>
-        <Animated.View style={[style, animatedStyle]} ref={containerRef}>
-          {children}
+        <Animated.View style={[style, animatedStyle]}>
+          <View ref={viewRef}>{children}</View>
         </Animated.View>
       </LongPressGestureHandler>
     );

@@ -1,5 +1,5 @@
 import { BlurView } from 'expo-blur';
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   Dimensions,
   StyleSheet,
@@ -7,11 +7,11 @@ import {
   View,
 } from 'react-native';
 import Animated, {
+  interpolate,
   useAnimatedStyle,
-  useSharedValue,
   withTiming,
 } from 'react-native-reanimated';
-import constants from '../../constants';
+import constants, { shadow } from '../../constants';
 import Helper from '../../Helper';
 import { useInternal } from '../../hooks/useInternal';
 import { usePortal } from '../../hooks/usePortal';
@@ -42,6 +42,8 @@ export default function Menu() {
     INSET_GAP,
     EXTRA_BOTTOM,
     HOLD_ITEM_TRANSFORM_DURATION,
+    HOLD_ITEM_SCALE_UP_VALUE,
+    HOLD_ITEM_SCALE_DOWN_VALUE,
   } = constants;
 
   const clearNode = () => {
@@ -49,7 +51,9 @@ export default function Menu() {
   };
 
   const onEnd = () => {
-    isMenuOpened.value = 0;
+    isMenuOpened.value = withTiming(0, {
+      duration: HOLD_ITEM_TRANSFORM_DURATION,
+    });
     clearNode();
   };
 
@@ -62,38 +66,68 @@ export default function Menu() {
   });
 
   const animatedStyle = useAnimatedStyle(() => {
-    const opacity = isMenuOpened.value ? 1 : 0;
+    const opacity = interpolate(isMenuOpened.value, [0, 1], [0, 1]);
     const viewHeight =
       menuProps.value.anchorY +
       menuItems.length * MENU_ITEM_HEIGHT +
       MIDDLE_GAP +
-      INSET_GAP +
-      menuProps.value.anchorHeight;
-    const isExceedHeight = viewHeight > windowHeight;
-    console.log(viewHeight, windowHeight);
-    const exceedNumber = Math.abs(viewHeight - windowHeight) + EXTRA_BOTTOM;
-    const top = isExceedHeight
-      ? menuProps.value.anchorY - exceedNumber
+      INSET_GAP;
+    menuProps.value.anchorHeight;
+
+    const isExceedHeight = viewHeight > windowHeight - EXTRA_BOTTOM;
+    const exceedNumber =
+      Math.abs(viewHeight - windowHeight) + EXTRA_BOTTOM + INSET_GAP;
+    const translateY = isExceedHeight
+      ? interpolate(
+          isMenuOpened.value,
+          [0, 1],
+          [menuProps.value.anchorY, menuProps.value.anchorY - exceedNumber],
+        )
       : menuProps.value.anchorY;
-    const left = menuProps.value.anchorX;
+
+    const translateX = menuProps.value.anchorX;
 
     return {
-      left,
-      top,
+      transform: [
+        {
+          translateY,
+        },
+        {
+          translateX,
+        },
+      ],
       opacity,
     };
   }, [menuItems, menuProps]);
 
   const animatedMenuListStyle = useAnimatedStyle(() => {
+    const scale = interpolate(isMenuOpened.value, [0, 1], [0, 1]);
     const menuEndX = menuProps.value.anchorX + MENU_WIDTH + INSET_GAP;
+    const translateX = -Math.abs(menuProps.value.anchorWidth - MENU_WIDTH) - 10;
     if (menuEndX > windowWidth) {
       return {
-        left: -Math.abs(menuProps.value.anchorWidth - MENU_WIDTH),
+        // left: -Math.abs(menuProps.value.anchorWidth - MENU_WIDTH),
+        transform: [{ scale }, { translateX }],
       };
     }
 
-    return {};
+    return {
+      transform: [{ scale }],
+    };
   }, [menuItems, menuProps]);
+
+  const animatedNodeStyle = useAnimatedStyle(() => {
+    const scale = interpolate(
+      isMenuOpened.value,
+      [0, 1],
+      [HOLD_ITEM_SCALE_DOWN_VALUE, HOLD_ITEM_SCALE_UP_VALUE],
+    );
+    return {
+      transform: [{ scale }],
+      width: menuProps.value.anchorWidth,
+      height: menuProps.value.anchorHeight,
+    };
+  }, [menuProps]);
 
   if (node) {
     return (
@@ -109,8 +143,8 @@ export default function Menu() {
             intensity={100}
           />
           <Animated.View style={[styles.menuCon, animatedStyle]}>
-            {node}
-            <Animated.View style={animatedMenuListStyle}>
+            <Animated.View style={animatedNodeStyle}>{node}</Animated.View>
+            <Animated.View style={[animatedMenuListStyle, shadow(0.3)]}>
               <MenuList items={menuItems} />
             </Animated.View>
           </Animated.View>
@@ -125,6 +159,7 @@ export default function Menu() {
 const styles = StyleSheet.create({
   menuCon: {
     position: 'absolute',
+    alignItems: 'baseline',
   },
   menuListCon: {
     borderRadius: 10,
