@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView, FlatList, TouchableOpacity, Text } from 'react-native';
+import { FlatList, SafeAreaView, Text, TouchableOpacity } from 'react-native';
 import ScreenID from './navigation/ScreenID';
 
 type AppProps = {
@@ -51,6 +51,14 @@ const data: Array<DataItem> = [
   {
     name: 'Hold Menu',
     screenID: ScreenID.HOLD_MENU,
+  },
+  {
+    name: 'Bomerang Card',
+    screenID: ScreenID.BOMERANG_CARD,
+  },
+  {
+    name: 'Grid Magnification',
+    screenID: ScreenID.GRID_MANIFICATION,
   },
 ];
 

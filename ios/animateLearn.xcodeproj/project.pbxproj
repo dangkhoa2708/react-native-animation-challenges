@@ -16,7 +16,6 @@
 		6D9722F3765E05CEACCEC4E1 /* libPods-animateLearn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C912F4544381E4427588A0B0 /* libPods-animateLearn.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		9A297F6F2789532900917F4D /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A297F6E2789532900917F4D /* File.swift */; };
-		BB6A00ACF5723CB29285D2E0 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3CAB3047614C09423DB9F9 /* ExpoModulesProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +44,6 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = animateLearn/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		829E924E066B3763B3E14169 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-animateLearn-animateLearnTests/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 		8F3CAB3047614C09423DB9F9 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-animateLearn/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
-		9A297F6D2789532900917F4D /* animateLearn-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "animateLearn-Bridging-Header.h"; sourceTree = "<group>"; };
 		9A297F6E2789532900917F4D /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		C912F4544381E4427588A0B0 /* libPods-animateLearn.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-animateLearn.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E24BB1CD6EE0380845DC63A3 /* Pods-animateLearn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-animateLearn.debug.xcconfig"; path = "Target Support Files/Pods-animateLearn/Pods-animateLearn.debug.xcconfig"; sourceTree = "<group>"; };
@@ -157,7 +155,6 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				567ECFBA644BC9497CB20CE7 /* Pods */,
-				9A297F6D2789532900917F4D /* animateLearn-Bridging-Header.h */,
 				D5B5B5A9F8266D4497299F5B /* ExpoModulesProviders */,
 			);
 			indentWidth = 2;
@@ -449,7 +446,6 @@
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				9A297F6F2789532900917F4D /* File.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
-				BB6A00ACF5723CB29285D2E0 /* ExpoModulesProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

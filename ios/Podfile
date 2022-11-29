@@ -1,11 +1,11 @@
-require File.join(File.dirname(`node --print "require.resolve('expo/package.json')"`), "scripts/autolinking")
+# require File.join(File.dirname(`node --print "require.resolve('expo/package.json')"`), "scripts/autolinking")
 require_relative '../node_modules/react-native/scripts/react_native_pods'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
 platform :ios, '12.0'
 
 target 'animateLearn' do
-  use_expo_modules!
+  # use_expo_modules!
   post_integrate do |installer|
     begin
       expo_patch_react_imports!(installer)

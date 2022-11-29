@@ -1,6 +1,5 @@
-import { BlurView } from 'expo-blur';
 import React from 'react';
-import { ImageBackground, Modal, StyleSheet, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
 import HoldItem from './components/holdItem';
 import { MenuItem } from './components/menu/types';
 import HoldMenuProvider from './components/provider/HoldMenuProvider';

@@ -1,18 +1,20 @@
-import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import ScreenID from './ScreenID';
-import TinderScreen from '../components/tinderCard/App';
-import ChewingGumScreen from '../components/chewingGumCard/Main';
-import Home from '../Home';
-import WaterScreen from '../components/animateWave/WaveScreen';
-import Duolingo from '../components/duolingo';
-import ScrollDishes from '../components/ScrollDishes';
+import React from 'react';
 import AnimateSplash from '../components/AnimateSplash';
-import ParallaxSwipe from '../components/ParallaxSwipe';
+import WaterScreen from '../components/animateWave/WaveScreen';
+import BomerangCardScreen from '../components/BomerangCard';
+import ChewingGumScreen from '../components/chewingGumCard/Main';
+import Duolingo from '../components/duolingo';
 import FeedbackFaces from '../components/FeedbackFaces';
-import PizzaChallenge from '../components/PizzaChallange';
+import GridMaginication from '../components/GridMagnification';
 import HoldMenuScreen from '../components/HoldMenu';
+import ParallaxSwipe from '../components/ParallaxSwipe';
+import PizzaChallenge from '../components/PizzaChallange';
+import ScrollDishes from '../components/ScrollDishes';
+import TinderScreen from '../components/tinderCard/App';
+import Home from '../Home';
+import ScreenID from './ScreenID';
 
 const Stack = createStackNavigator();
 
@@ -69,6 +71,20 @@ function NavigationMain() {
           }}
           name={ScreenID.HOLD_MENU}
           component={HoldMenuScreen}
+        />
+        <Stack.Screen
+          options={{
+            headerShown: false,
+          }}
+          name={ScreenID.BOMERANG_CARD}
+          component={BomerangCardScreen}
+        />
+        <Stack.Screen
+          options={{
+            headerShown: false,
+          }}
+          name={ScreenID.GRID_MANIFICATION}
+          component={GridMaginication}
         />
       </Stack.Navigator>
     </NavigationContainer>
