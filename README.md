@@ -3,7 +3,9 @@ I do animation & UI challenges, it's more like testing implementation ideas, so 
 
 <!-- ![alt-text](https://github.com/dangkhoa2708/react-native-animation-challenges/blob/main/assets/gifs/chewing_gum.gif) -->
 <div>
-  <img src="https://github.com/dangkhoa2708/react-native-animation-challenges/blob/main/assets/gifs/emotions_feedback.gif" width="140" height="240" />
+  
+<img src="https://github.com/dangkhoa2708/react-native-animation-challenges/blob/main/assets/gifs/bomerang-card.gif" width="140" height="240" />
+<img src="https://github.com/dangkhoa2708/react-native-animation-challenges/blob/main/assets/gifs/grid-mag.gif" width="140" height="240" />
 <img src="https://github.com/dangkhoa2708/react-native-animation-challenges/blob/main/assets/gifs/parallax_swiper.gif" width="120" height="240" />
 <img src="https://github.com/dangkhoa2708/react-native-animation-challenges/blob/main/assets/gifs/animate_splash.gif" width="120" height="240" />
 <img src="https://github.com/dangkhoa2708/react-native-animation-challenges/blob/main/assets/gifs/pizza_challenge.gif" width="140" height="240" />
@@ -29,7 +31,3 @@ Install Pods
 cd pod & pod install
 ```
 Go to ios folder -> open xcworkspace file with xcode and you're ready to go
-
-## Android
-I mainly do quick code and test on IOS, but open it with Android Studio should work
-
